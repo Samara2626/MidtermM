@@ -1,0 +1,46 @@
+1. Difference Between git switch and git checkout
+git checkout: This command is versatile and used for multiple purposes, such as switching branches, restoring files, and checking out specific commits. However, its wide range of functions can sometimes lead to confusion.
+
+git switch: Introduced in Git 2.23, this command is specifically designed for switching branches. It simplifies the process by making it clearer what you intend to do, reducing the risk of accidental changes to files or commits.
+
+Usage Examples:
+
+To switch branches: git switch <branch_name>
+To create and switch to a new branch: git switch -b <new_branch_name>
+2. What Does git merge Do?
+The git merge command integrates changes from one branch into another. When you merge:
+
+Git combines the commit histories of the two branches.
+It creates a new "merge commit" in the branch you are merging into, which has two parent commits (one from each branch).
+3. Commit History After Rebase
+When you perform a git rebase:
+
+The commits from the branch you are rebasing are reapplied on top of another base commit (usually from another branch).
+This results in a linear history, meaning the commit history appears as a straight line instead of a branching structure.
+Why Rebase?
+
+It makes the project history cleaner and easier to understand.
+However, it rewrites commit history, which can be problematic if others are working on the same branch, as it can lead to conflicts and confusion.
+4. Understanding Remote and Local Branches
+In the terminal, you can differentiate between remote and local branches using the following conventions:
+
+Local branches: These are listed simply by using git branch. They do not have any prefix.
+
+Remote branches: These are usually prefixed with the name of the remote (commonly origin). You can view them by using:
+
+bash
+Copy code
+git branch -r
+or to see both local and remote branches:
+
+bash
+Copy code
+git branch -a
+Example:
+
+A local branch might be shown as main.
+A remote branch will be shown as origin/main.
+If you have any more questions or need further clarification, feel free to ask!
+
+
+
